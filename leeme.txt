@@ -1,0 +1,54 @@
+﻿
+Contraseña KIO Front
+ mysql --> root/aPG_MYSQL_Ñ17
+ Liferay --> iecisa/aPG_LiFeRaY62_Ñ3
+ putty --> root/aPG_FRoNTeND_Ñ3 
+
+   
+ kill -9 pid
+ ps -aux | grep java --> Procesos java activos-
+ 
+ 
+ mvn clean install -Dmaven.test.skip=true -Djars -Dwars --> Compilar invesite en 3.2 (incluir opcion -o para ejecutar modo offline)
+ mvn clean install -DskipTests -Djars,wars
+ mvn -X versions:set -DoldVersion=0.4-M3 -DnewVersion=0.4-M3-SNAPSHOT
+ mvn clean package --> Generar los pdfs en ste-docs
+ 
+ git pull origin 3.2-BF
+ git reset --hard ee96c60aaa28d1c5509a23da29b51472e4d54591 --> Deshacer cambios
+ git checkout -- ste/ste-cte/ste-cte-webapp/src/main/webapp/WEB-INF/jsp/notificaciones/view.jsp --> Deshacer cambios en local de un fichero modificado
+ git push origin 3.2-BF
+ git remote -v
+ 
+ Ejemplo --> Modificar el ultimo commit, para por ejemplo añadir un comentario
+   git commit --amend -m 'INVESITE-89 Movemos la documentacion asociada de clamav a la parte servidora'
+   git push origin INVESITE-89 -f
+
+ 
+ 
+ Docker Comandos
+ 
+   docker ps -a
+   docker images
+      docker rmi ste-tomcat:3.2-SNAPSHOT
+      docker logs --tail 100 1fedbbd4ee65
+	  docker exec -it 1fedbbd4ee65 /bin/bash
+	  docker inspect 34e0b88b5816
+	  
+   docker cp invesiteRE.war 13bf7e448c2c:/usr/local/tomcat/webapps/	 --> Desde c:\docker_tmp  
+   
+   docker restart stedocker_ste-appserver_1 --> Reiniciar tomcat
+   docker restart stedocker_ste-clamavd_1 --> Reiniciar servicio clamav local
+    
+   https://github.com/dinkel/docker-clamavd/blob/master/Dockerfile --> Revisar la creacion del contenedor de docker
+   cat /etc/clamav/clamd.conf
+   
+ Clamav Commands
+  clamd /clamconf
+  systemctl status/start/stop clamd@scan
+  logs-> /var/log/messages y /var/log/clamd.scan
+  ps -aux
+ 
+    
+ 
+ 
