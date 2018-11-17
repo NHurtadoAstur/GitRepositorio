@@ -1,4 +1,4 @@
-﻿
+
 Contraseña KIO Front
  mysql --> root/aPG_MYSQL_Ñ17
  Liferay --> iecisa/aPG_LiFeRaY62_Ñ3
@@ -51,4 +51,6 @@ Contraseña KIO Front
  
     
  
- 
+    ------------------
+                Hotfix1
+    ------------
