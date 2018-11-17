@@ -82,3 +82,5 @@ Contraseña KIO Front
 
 
    Tareas Master
+
+   Commit Jira 02
