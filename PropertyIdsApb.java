@@ -7,6 +7,7 @@ public class PropertyIdsApb {
 	
 	    public static final String ID_DOC = "apb:idDoc";
 	    public static final String NAME = "apb:name";
+	    public static final String NOEL = "apb:noel";
 	    public static final String OBJECT_TYPE = "apb:objectType";
 	    public static final String REPOSITORY = "apb:repository";
 	    public static final String APPLICATION_KEY = "apb:applicationKey";
